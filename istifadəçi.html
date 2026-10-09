@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Gunel’s Story — Hər uşağın öz hekayəsi</title>
+<meta name="description" content="Uşağınız üçün sevgi ilə hazırlanmış fərdi hekayələr və xüsusi hədiyyələr.">
+<link rel="icon" type="image/png" href="image/favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #29243d;
+  --muted: #77738d;
+  --purple: #6a59d7;
+  --purple2: #4f40bd;
+  --lilac: #f0edff;
+  --pink: #fff0f4;
+  --cream: #fffaf1;
+  --line: #eeeaf6;
+  --white: #fff;
+  --green: #1c8066;
+  --shadow: 0 18px 55px #34226b0d;
+  --radius: 24px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+body { color: var(--ink); background: #fff; font: 15px/1.65 'DM Sans', sans-serif; }
+h1,h2,h3 { font-family: Manrope, sans-serif; line-height: 1.15; letter-spacing: -.045em; }
+a { color: inherit; text-decoration: none; }
+button,input,select,textarea { font: inherit; }
+button { cursor: pointer; }
+.container { width: min(1160px, calc(100% - 40px)); margin: auto; }
+
+.top-note { background: #2f2850; color: #fff; text-align: center; font-size: 12px; padding: 8px 15px; letter-spacing: .03em; }
+.header { position: sticky; top: 0; z-index: 30; background: #ffffffed; backdrop-filter: blur(14px); border-bottom: 1px solid #f1edf7; }
+.nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 11px; font: 800 17px Manrope, sans-serif; white-space: nowrap; }
+.brand-mark { width: 42px; height: 42px; border-radius: 15px; display: grid; place-items: center; background: linear-gradient(145deg,#7869e7,#a99af6); color: white; font-size: 23px; box-shadow: 0 8px 20px #6a59d733; }
+.brand small { display: block; font: 700 9px 'DM Sans'; letter-spacing: 2px; color: #9690b1; margin-top: 1px; }
+.navlinks { display: flex; align-items: center; gap: 22px; color: #67617f; font-size: 13px; font-weight: 700; }
+.navlinks a:hover, .navlinks a.active { color: var(--purple); }
+.btn { border: 0; border-radius: 14px; min-height: 46px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; background: var(--purple); color: white; font-weight: 800; font-size: 13px; box-shadow: 0 8px 20px #6a59d729; transition: .2s; }
+.btn:hover { transform: translateY(-2px); background: var(--purple2); }
+.btn.light { background: white; color: var(--purple); border: 1px solid #e8e2ff; box-shadow: none; }
+.btn.outline { background: transparent; color: var(--purple); border: 1px solid #ded7ff; box-shadow: none; }
+.menu-toggle { display: none; border: 1px solid var(--line); background: #fff; border-radius: 12px; padding: 10px; color: var(--ink); }
+
+.hero { padding: 76px 0 68px; background: radial-gradient(ellipse at 80% 25%,#f7dfe9 0,transparent 32%), radial-gradient(ellipse at 18% 18%,#eae5ff 0,transparent 38%), linear-gradient(130deg,#fbf9ff,#fffaf7); }
+.hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 50px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--purple); background: #fff; border: 1px solid #eee8ff; padding: 8px 13px; border-radius: 99px; font-size: 11px; font-weight: 800; letter-spacing: .07em; }
+.eyebrow i { width: 7px; height: 7px; border-radius: 50%; background: #e9a0bd; }
+.hero h1 { font-size: clamp(42px,5.5vw,68px); margin: 21px 0 18px; max-width: 640px; }
+.hero h1 span { color: var(--purple); font-style: italic; }
+.hero p { max-width: 510px; color: var(--muted); font-size: 16px; line-height: 1.8; margin-bottom: 26px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.trust { display: flex; align-items: center; gap: 12px; margin-top: 28px; color: #88829d; font-size: 12px; }
+.avatars { display: flex; }
+.avatars span { width: 28px; height: 28px; border: 2px solid white; border-radius: 50%; display: grid; place-items: center; margin-left: -6px; background: #e8e2ff; font-size: 12px; }
+.avatars span:first-child { margin-left: 0; background: #ffe4ed; }
+.hero-visual { min-height: 390px; position: relative; display: grid; place-items: center; }
+.hero-orbit { position: absolute; width: 340px; height: 340px; border: 1px solid #d9d0fb; border-radius: 50%; transform: rotate(-20deg); }
+.hero-orbit:after { content: ''; position: absolute; inset: 25px; border: 1px dashed #dfd8f6; border-radius: 50%; }
+.storybook { position: relative; width: 255px; height: 310px; transform: rotate(-5deg); filter: drop-shadow(0 22px 22px #4b3b8630); }
+.book-back { position: absolute; inset: 10px -13px -6px 15px; border-radius: 10px 20px 20px 10px; background: #c7baf6; transform: rotate(8deg); }
+.book-cover { position: absolute; inset: 0; border-radius: 9px 18px 18px 9px; border: 6px solid #fff; background: linear-gradient(155deg,#7667df,#9e8ef0 64%,#e9c1d4); color: #fff; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 25px; }
+.book-cover .moon { font-size: 66px; line-height: 1; margin-bottom: 20px; text-shadow: 0 8px 20px #3c2e7830; }
+.book-cover strong { font: 800 25px/1.12 Manrope; max-width: 180px; }
+.book-cover small { font-size: 10px; letter-spacing: 2px; margin-top: 16px; opacity: .8; }
+.floating { position: absolute; background: #fff; border: 1px solid #f0eaf9; box-shadow: var(--shadow); border-radius: 18px; padding: 12px 15px; font-size: 12px; font-weight: 800; }
+.floating.one { left: 0; top: 64px; transform: rotate(-5deg); }
+.floating.two { right: 0; bottom: 62px; transform: rotate(4deg); }
+.floating span { font-size: 20px; margin-right: 7px; vertical-align: middle; }
+.spark { position: absolute; color: #8b79e8; font-size: 27px; }
+.spark.s1 { top: 35px; right: 70px; }
+.spark.s2 { bottom: 32px; left: 48px; font-size: 20px; }
+
+.section { padding: 82px 0; }
+.section.soft { background: #fcfaff; }
+.section-head { text-align: center; max-width: 650px; margin: 0 auto 38px; }
+.section-head .eyebrow { margin-bottom: 14px; }
+.section-head h2 { font-size: clamp(30px,4vw,44px); margin-bottom: 13px; }
+.section-head p { color: var(--muted); margin-bottom: 0; }
+
+.features { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.feature { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: var(--shadow); }
+.feature-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 17px; background: var(--lilac); font-size: 24px; margin-bottom: 20px; }
+.feature:nth-child(2) .feature-icon { background: var(--pink); }
+.feature:nth-child(3) .feature-icon { background: var(--cream); }
+.feature h3 { font-size: 18px; margin-bottom: 10px; }
+.feature p { color: var(--muted); font-size: 13px; margin: 0; }
+
+.price-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; align-items: stretch; max-width: 820px; margin: 0 auto; }
+.price-card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 32px; position: relative; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.price-card.featured { border: 1.5px solid #a89df1; box-shadow: 0 18px 45px #6a59d71c; }
+.popular { position: absolute; right: 18px; top: 17px; background: var(--lilac); color: var(--purple); font-size: 10px; font-weight: 800; padding: 6px 9px; border-radius: 99px; }
+.price-card h3 { font-size: 21px; margin: 5px 0 9px; }
+.price-card p { font-size: 13px; color: var(--muted); min-height: 40px; }
+.price { font: 800 42px Manrope; letter-spacing: -.05em; margin: 13px 0 6px; }
+.price small { font: 600 13px 'DM Sans'; letter-spacing: 0; color: var(--muted); }
+.old-price { text-decoration: line-through; color: var(--muted); font-size: 18px; font-weight: 700; margin-right: 8px; }
+.discount-badge { display: inline-block; background: #fee2e2; color: #dc2626; font-size: 12px; font-weight: 800; padding: 4px 10px; border-radius: 8px; margin-bottom: 12px; }
+.campaign-title { font-size: 12px; font-weight: 800; color: var(--purple); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+.price-card ul { list-style: none; padding: 0; margin: 18px 0 24px; flex: 1; }
+.price-card li { padding: 8px 0; color: #5e5875; font-size: 13px; display: flex; gap: 9px; }
+.price-card li:before { content: '✓'; color: var(--green); font-weight: 800; }
+.price-card .btn { width: 100%; }
+
+.portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.work-card { border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: white; box-shadow: var(--shadow); transition: transform .25s; }
+.work-card:hover { transform: translateY(-4px); }
+.work-art { height: 235px; display: grid; place-items: center; position: relative; overflow: hidden; background: linear-gradient(145deg,#eae4ff,#fce4ee); }
+.work-art img { width: 100%; height: 100%; object-fit: cover; }
+.work-meta { padding: 19px 20px; }
+.work-meta small { color: var(--purple); font-weight: 800; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.work-meta h3 { font-size: 17px; margin: 6px 0; }
+
+.view-btn {
+  display: none; position: absolute; top: 10px; right: 10px; width: 36px; height: 36px;
+  border: none; border-radius: 50%; background: rgba(255,255,255,0.92); color: var(--purple);
+  align-items: center; justify-content: center; cursor: pointer; z-index: 5;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); backdrop-filter: blur(6px); transition: transform .2s;
+}
+.view-btn svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.view-btn:active { transform: scale(0.9); }
+
+.portfolio-grid.collapsed .work-card:nth-child(n+3) { display: none; }
+.portfolio-toggle { display: flex; justify-content: center; margin-top: 28px; }
+.portfolio-toggle-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--lilac); color: var(--purple); border: 1px solid #e0d9ff;
+  border-radius: 50px; padding: 12px 22px; font-size: 13px; font-weight: 800;
+  cursor: pointer; transition: all .25s ease;
+}
+.portfolio-toggle-btn:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
+.portfolio-toggle-btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2.2; transition: transform .3s ease; }
+.portfolio-toggle-btn.open svg { transform: rotate(180deg); }
+
+.image-modal {
+  position: fixed; inset: 0; background: rgba(8,13,40,0.94);
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+  z-index: 99999; opacity: 0; visibility: hidden; pointer-events: none;
+  transition: opacity .3s ease, visibility .3s ease; backdrop-filter: blur(8px);
+}
+.image-modal.active { opacity: 1; visibility: visible; pointer-events: auto; }
+.modal-image { max-width: 95vw; max-height: 85vh; object-fit: contain; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.4); transform: scale(0.92); transition: transform .35s cubic-bezier(0.16,1,0.3,1); }
+.image-modal.active .modal-image { transform: scale(1); }
+.modal-close-btn {
+  position: absolute; top: 16px; right: 16px; width: 42px; height: 42px; border: none; border-radius: 50%;
+  background: rgba(255,255,255,0.95); color: var(--ink); font-size: 26px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: transform .2s;
+}
+.modal-close-btn:hover { transform: rotate(90deg); }
+
+.order-section { background: linear-gradient(130deg,#f3efff,#fff5f7); }
+.order-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 45px; align-items: start; }
+.order-copy h2 { font-size: clamp(32px,4vw,45px); margin: 17px 0; }
+.order-copy p { color: var(--muted); }
+.order-points { list-style: none; padding: 0; margin: 24px 0; }
+.order-points li { padding: 8px 0; color: #625c7c; font-size: 13px; }
+.order-points li:before { content: '✦'; color: var(--purple); margin-right: 10px; }
+.order-form { background: white; border: 1px solid #eee8fb; border-radius: 25px; padding: 28px; box-shadow: 0 20px 60px #3e2b780c; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 7px; }
+.field.full { grid-column: 1/-1; }
+.field label { font-size: 12px; font-weight: 800; color: #5e5875; }
+.field input, .field select, .field textarea { width: 100%; border: 1px solid #e9e4f2; border-radius: 12px; padding: 12px 13px; outline: none; background: #fff; color: var(--ink); font-size: 13px; }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #a69aef; box-shadow: 0 0 0 3px #eeeaff; }
+.field textarea { min-height: 100px; resize: vertical; }
+.form-foot { display: flex; align-items: flex-start; gap: 10px; margin: 16px 0; color: #8a849f; font-size: 11px; }
+.form-foot input { margin-top: 4px; }
+.order-form .btn { width: 100%; }
+
+.about-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
+.about-art { min-height: 300px; border-radius: 28px; background: radial-gradient(circle at 50% 40%,#fff 0 12%,transparent 13%), linear-gradient(145deg,#eae4ff,#fff0f4); display: grid; place-items: center; position: relative; overflow: hidden; }
+.about-art .big-star { font-size: 110px; color: #8c7ce7; text-shadow: 0 15px 25px #8c7ce733; }
+.about-art .circle { position: absolute; border: 1px solid #b8aef1; border-radius: 50%; width: 260px; height: 260px; }
+.about-copy h2 { font-size: clamp(30px,4vw,42px); }
+.about-copy p { color: var(--muted); margin-bottom: 14px; }
+.notice { border-radius: 14px; padding: 13px 15px; background: #f5f2ff; color: #6657be; font-size: 12px; margin-top: 18px; }
+
+.legal-grid { display: grid; grid-template-columns: 220px 1fr; gap: 35px; align-items: start; }
+.legal-nav { position: sticky; top: 110px; border: 1px solid var(--line); border-radius: 18px; padding: 18px; background: #fff; }
+.legal-nav strong { display: block; font: 800 13px Manrope; margin-bottom: 9px; }
+.legal-nav a { display: block; padding: 8px 0; font-size: 12px; color: var(--muted); }
+.legal-nav a:hover { color: var(--purple); }
+.legal-content { max-width: 800px; }
+.legal-content h3 { font-size: 19px; margin: 28px 0 10px; color: var(--ink); }
+.legal-content p, .legal-content li { color: #706b85; font-size: 14px; line-height: 1.75; margin-bottom: 12px; }
+.legal-content ul { padding-left: 20px; margin-bottom: 16px; }
+.legal-content strong { color: var(--ink); }
+.info-box { background: #f7f7ff; border: 1px solid #e7e5ff; border-radius: 14px; padding: 16px 18px; margin: 16px 0; font-size: 13px; color: #555; }
+
+.footer { background: #29243d; color: white; padding: 48px 0 20px; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 35px; padding-bottom: 35px; }
+.footer .brand { margin-bottom: 15px; }
+.footer .brand small { color: #b3accf; }
+.footer p { max-width: 320px; color: #b9b3ce; font-size: 12px; }
+.footer h3 { font-size: 13px; margin-bottom: 14px; }
+.footer-links { display: grid; gap: 9px; color: #c9c3db; font-size: 12px; }
+.footer-links a:hover { color: #fff; }
+.copyright { border-top: 1px solid #ffffff20; padding-top: 17px; display: flex; justify-content: space-between; gap: 15px; color: #aaa3c4; font-size: 11px; }
+
+.status { position: fixed; right: 20px; bottom: 20px; z-index: 60; max-width: min(390px,calc(100% - 40px)); background: #29243d; color: white; border-radius: 14px; padding: 13px 17px; box-shadow: 0 10px 30px #21163b30; font-size: 13px; opacity: 0; transform: translateY(12px); pointer-events: none; transition: .25s; }
+.status.show { opacity: 1; transform: none; }
+.status.success { background: #1c8066; }
+.status.error { background: #a33c56; }
+
+.notif-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.65); backdrop-filter: blur(6px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px; }
+.notif-overlay.active { display: flex; }
+.notif-card { background: #fff; border-radius: 22px; padding: 28px 24px; max-width: 420px; width: 100%; text-align: center; box-shadow: 0 25px 60px rgba(0,0,0,.25); position: relative; animation: popIn .35s cubic-bezier(.16,1,.3,1); }
+@keyframes popIn { from { opacity: 0; transform: scale(.92) translateY(20px); } to { opacity: 1; transform: none; } }
+.notif-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border: none; background: #f1f5f9; border-radius: 50%; font-size: 18px; color: #64748b; cursor: pointer; }
+.notif-title { font: 800 1.25rem Manrope; margin: 8px 0 6px; }
+.notif-date { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.notif-msg { font-size: 14px; color: #555; line-height: 1.6; text-align: left; max-height: 220px; overflow-y: auto; white-space: pre-line; }
+.notif-btn { width: 100%; margin-top: 18px; }
+
+.sponsor-btn { position: fixed; bottom: 24px; left: 24px; z-index: 50; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg,#6a59d7,#9e8ef0); color: #fff; border: none; font-size: 22px; box-shadow: 0 8px 25px #6a59d745; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: .2s; }
+.sponsor-btn:hover { transform: scale(1.08); }
+.modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.6); backdrop-filter: blur(5px); z-index: 2000; display: none; align-items: flex-end; justify-content: center; }
+.modal-overlay.active { display: flex; }
+.modal-sheet { width: 100%; max-width: 480px; background: #fff; border-radius: 24px 24px 0 0; padding: 24px 20px 30px; max-height: 85vh; overflow-y: auto; animation: slideUp .3s cubic-bezier(.16,1,.3,1); }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: none; } }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.modal-header h3 { font: 800 1.15rem Manrope; }
+.close-x { width: 32px; height: 32px; border: none; background: #f1f5f9; border-radius: 50%; font-size: 18px; cursor: pointer; }
+
+.empty-note { grid-column: 1/-1; text-align: center; color: var(--muted); padding: 30px; border: 1px dashed #ded7ef; border-radius: 16px; font-size: 14px; }
+
+/* ===== MOBİL — kiçik və səliqəli ===== */
+@media (max-width: 900px) {
+  .navlinks { gap: 12px; }
+  .navlinks a { font-size: 12px; }
+  .nav > .btn { display: none; }
+  .hero-grid { gap: 20px; }
+  .hero-visual { transform: scale(.9); }
+  .features { grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2,1fr); gap: 14px; }
+  .order-grid { grid-template-columns: 1fr; gap: 20px; }
+  .footer-grid { grid-template-columns: 1.3fr 1fr; }
+  .footer-grid > div:last-child { grid-column: 2; }
+  .about-panel { grid-template-columns: 1fr; gap: 25px; }
+  .legal-grid { grid-template-columns: 1fr; }
+  .legal-nav { position: static; margin-bottom: 20px; }
+}
+@media (max-width: 650px) {
+  .container { width: min(100% - 24px, 1160px); }
+  .top-note { font-size: 10px; padding: 6px 12px; }
+  .nav { height: 60px; }
+  .brand { font-size: 14px; gap: 8px; }
+  .brand-mark { width: 34px; height: 34px; font-size: 18px; border-radius: 12px; }
+  .brand small { font-size: 8px; }
+  .menu-toggle { display: block; padding: 8px; border-radius: 10px; }
+  .navlinks { display: none; position: absolute; top: 60px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); padding: 12px 18px 16px; flex-direction: column; align-items: stretch; gap: 0; }
+  .navlinks.open { display: flex; }
+  .navlinks a { padding: 11px 0; border-bottom: 1px solid #f4f0fa; font-size: 13px; }
+
+  .hero { padding: 36px 0 28px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 12px; }
+  .hero h1 { font-size: 32px; margin: 14px 0 12px; }
+  .hero p { font-size: 14px; margin-bottom: 18px; }
+  .hero-actions { gap: 8px; }
+  .btn { min-height: 40px; padding: 0 16px; font-size: 12px; border-radius: 12px; }
+  .hero-visual { min-height: 260px; transform: scale(.78); margin: -8px 0; }
+  .eyebrow { font-size: 10px; padding: 6px 10px; }
+
+  .section { padding: 48px 0; }
+  .section-head { margin-bottom: 24px; }
+  .section-head h2 { font-size: 26px; }
+  .section-head p { font-size: 13px; }
+
+  .features { grid-template-columns: 1fr; gap: 12px; }
+  .feature { padding: 20px; border-radius: 16px; }
+  .feature-icon { width: 42px; height: 42px; font-size: 20px; border-radius: 12px; margin-bottom: 14px; }
+  .feature h3 { font-size: 16px; }
+  .feature p { font-size: 12px; }
+
+  /* Qiymət slider */
+  .price-grid {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; gap: 12px; padding: 0 2px 12px;
+    max-width: 100%; scrollbar-width: none;
+  }
+  .price-grid::-webkit-scrollbar { display: none; }
+  .price-card { flex: 0 0 82%; max-width: 290px; scroll-snap-align: center; margin: 0; padding: 22px 18px; border-radius: 18px; }
+  .price-card.featured { transform: none; }
+  .price-card h3 { font-size: 17px; }
+  .price-card p { font-size: 12px; min-height: 32px; }
+  .price { font-size: 32px; margin: 10px 0 4px; }
+  .price small { font-size: 12px; }
+  .old-price { font-size: 15px; }
+  .discount-badge { font-size: 11px; padding: 3px 8px; }
+  .campaign-title { font-size: 11px; }
+  .price-card ul { margin: 12px 0 16px; }
+  .price-card li { font-size: 12px; padding: 6px 0; }
+  .price-card .btn { min-height: 38px; font-size: 12px; }
+
+  /* Portfolio */
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .work-card { border-radius: 14px; }
+  .work-art { height: auto; aspect-ratio: 1 / 1; }
+  .work-meta { padding: 10px 8px; }
+  .work-meta small { font-size: 8px; }
+  .work-meta h3 { font-size: 0.78rem; line-height: 1.25; }
+  .view-btn { width: 30px; height: 30px; top: 7px; right: 7px; }
+  .view-btn svg { width: 15px; height: 15px; }
+  .portfolio-toggle { margin-top: 18px; }
+  .portfolio-toggle-btn { padding: 9px 16px; font-size: 12px; gap: 6px; }
+  .portfolio-toggle-btn svg { width: 14px; height: 14px; }
+
+  /* Order form */
+  .order-form { padding: 18px; border-radius: 18px; }
+  .form-grid { grid-template-columns: 1fr; gap: 12px; }
+  .field label { font-size: 11px; }
+  .field input, .field select, .field textarea { padding: 10px 11px; font-size: 13px; border-radius: 10px; }
+  .field textarea { min-height: 80px; }
+  .form-foot { font-size: 10px; margin: 12px 0; }
+  .order-copy h2 { font-size: 26px; }
+  .order-copy p { font-size: 13px; }
+  .order-points li { font-size: 12px; }
+
+  /* About */
+  .about-art { min-height: 200px; border-radius: 20px; }
+  .about-art .big-star { font-size: 80px; }
+  .about-copy h2 { font-size: 24px; }
+  .about-copy p { font-size: 13px; }
+  .notice { font-size: 11px; padding: 11px 13px; }
+
+  /* Legal */
+  .legal-content h3 { font-size: 16px; margin: 20px 0 8px; }
+  .legal-content p, .legal-content li { font-size: 13px; }
+  .info-box { font-size: 12px; padding: 12px 14px; }
+
+  /* Footer */
+  .footer { padding: 36px 0 16px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; padding-bottom: 24px; }
+  .footer-grid > div:last-child { grid-column: auto; }
+  .copyright { flex-direction: column; font-size: 10px; gap: 8px; }
+
+  /* Sponsor düyməsi */
+  .sponsor-btn { bottom: 14px; left: 14px; width: 44px; height: 44px; font-size: 18px; }
+
+  /* Bildiriş modal */
+  .notif-card { padding: 22px 18px; border-radius: 18px; max-width: 340px; }
+  .notif-close { width: 28px; height: 28px; font-size: 16px; top: 10px; right: 10px; }
+  .notif-title { font-size: 1.05rem; }
+  .notif-date { font-size: 11px; }
+  .notif-msg { font-size: 13px; max-height: 180px; }
+  .notif-btn { min-height: 40px; margin-top: 14px; font-size: 12px; }
+
+  /* Sponsor modal */
+  .modal-sheet { padding: 18px 16px 24px; border-radius: 20px 20px 0 0; }
+  .modal-header h3 { font-size: 1rem; }
+  .close-x { width: 28px; height: 28px; font-size: 16px; }
+  .modal-sheet .field { margin-bottom: 12px !important; }
+  .modal-sheet .field label { font-size: 11px; }
+  .modal-sheet .field input,
+  .modal-sheet .field textarea { padding: 10px 11px; font-size: 13px; border-radius: 10px; }
+  .modal-sheet .btn { min-height: 40px; font-size: 12px; }
+
+  /* Fullscreen modal */
+  .modal-close-btn { width: 36px; height: 36px; font-size: 22px; top: 12px; right: 12px; }
+  .image-modal { padding: 12px; }
+
+  /* Status toast */
+  .status { right: 12px; bottom: 70px; font-size: 12px; padding: 11px 14px; border-radius: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-note">Balacaların dünyasına aid unudulmaz hekayələr — sevgi ilə hazırlanır ✨</div>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="brand-mark">✦</span>
+      <span>Gunel’s Story<small>HƏR UŞAĞIN ÖZ HEKAYƏSİ</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menyu">☰</button>
+    <nav class="navlinks" id="navlinks">
+      <a href="#home">Əsas</a>
+      <a href="#about">Haqqımızda</a>
+      <a href="#pricing">Qiymətlər</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#order">Sifariş</a>
+      <a href="#terms">Şərtlər</a>
+      <a href="#privacy">Məxfilik</a>
+    </nav>
+    <a class="btn" href="#order">Hekayəni sifariş et <span>↗</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><i></i> BALACALAR ÜÇÜN FƏRDİ HEKAYƏLƏR</span>
+        <h1>Hər uşağın hekayəsi <span>sehrlidir.</span></h1>
+        <p>Övladınızın özünün baş qəhrəman olduğu, xatirələrə çevrilən xüsusi hekayələr və fərdi hədiyyələr hazırlayırıq.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#order">Öz hekayəni yarat <span>→</span></a>
+          <a class="btn light" href="#portfolio">Nümunələrə bax</a>
+        </div>
+        <div class="trust">
+          <div class="avatars"><span>🌙</span><span>⭐</span><span>🧸</span></div>
+          <span>Kiçik qəhrəmanlar üçün böyük xatirələr</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-orbit"></div>
+        <div class="storybook">
+          <div class="book-back"></div>
+          <div class="book-cover">
+            <div class="moon">☾</div>
+            <strong>Mənim sehrli hekayəm</strong>
+            <small>YALNIZ SƏNƏ ÖZƏL</small>
+          </div>
+        </div>
+        <div class="floating one"><span>✨</span> Fərdi hazırlanır</div>
+        <div class="floating two"><span>💜</span> Sevgi ilə yaradılır</div>
+        <b class="spark s1">✦</b>
+        <b class="spark s2">✧</b>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container about-panel">
+      <div class="about-art">
+        <div class="circle"></div>
+        <div class="big-star">✧</div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow"><i></i> HAQQIMIZDA</span>
+        <h2>Uşağınızın dünyasına açılan kiçik bir sehr.</h2>
+        <p>Gunel’s Story uşaqlar üçün fərdi hekayələr hazırlayan yaradıcı layihədir. Hər hekayəni balacanın maraqlarına, xəyallarına və xüsusi anlarına uyğunlaşdırırıq.</p>
+        <p>Bizim üçün hər sifariş sadəcə bir məhsul deyil — ailənin illərlə saxlayacağı xatirədir.</p>
+        <div class="notice">Hər detalın mərkəzində uşağın öz hekayəsi, təxəyyülü və sevinc hissi dayanır.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><i></i> NİYƏ GUNEL’S STORY?</span>
+        <h2>Adi hədiyyədən daha çoxu</h2>
+        <p>Şəxsi toxunuş, diqqətlə hazırlanmış məzmun və yadda qalan təqdimat.</p>
+      </div>
+      <div class="features">
+        <article class="feature">
+          <div class="feature-icon">🧒</div>
+          <h3>Baş qəhrəman sizin uşağınızdır</h3>
+          <p>Hekayənin mərkəzində balacanızın adı, arzuları və sevdiyi mövzular dayanır.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">📖</div>
+          <h3>Fərdi yanaşma</h3>
+          <p>Hər sifarişə ayrıca yanaşılır, detallar sizin təqdim etdiyiniz məlumatlara uyğun hazırlanır.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">🎁</div>
+          <h3>Yadda qalan hədiyyə</h3>
+          <p>Ad günü, xüsusi gün və ya sadəcə sevindirmək üçün mənalı və fərqli seçim.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><i></i> QİYMƏTLƏR</span>
+        <h2>Kiçik qəhrəmanınıza uyğun seçim</h2>
+        <p>Qiymətlər real-time yenilənir. Endirim aktivdirsə avtomatik göstərilir.</p>
+      </div>
+      <div class="price-grid" id="priceGrid">
+        <div class="empty-note">Qiymətlər yüklənir...</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><i></i> PORTFOLİO</span>
+        <h2>Bir az xəyal, çoxlu sevgi</h2>
+        <p>Hazırladığımız real kitab nümunələri.</p>
+      </div>
+      <div class="portfolio-wrapper">
+        <div class="portfolio-grid collapsed" id="portfolioGrid">
+          <div class="empty-note">Portfolio yüklənir...</div>
+        </div>
+        <div class="portfolio-toggle" id="portfolioToggle" style="display:none;">
+          <button type="button" class="portfolio-toggle-btn" id="portfolioToggleBtn">
+            <span id="toggleText">Hamısını göstər</span>
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section order-section" id="order">
+    <div class="container order-grid">
+      <div class="order-copy">
+        <span class="eyebrow"><i></i> SİFARİŞ</span>
+        <h2>Hekayənizi birlikdə yaradaq.</h2>
+        <p>Formanı doldurun, komandamız sifarişin detalları ilə bağlı sizinlə əlaqə saxlasın.</p>
+        <ul class="order-points">
+          <li>İstədiyiniz paketi seçin</li>
+          <li>Əlaqə məlumatlarınızı qeyd edin</li>
+          <li>Əlavə arzularınızı bizə yazın</li>
+        </ul>
+        <div class="notice">Məlumatlarınız yalnız müraciətinizi qəbul etmək və sifarişlə bağlı sizinlə əlaqə saxlamaq məqsədilə istifadə olunur.</div>
+      </div>
+      <form class="order-form" id="orderForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="parentName">Valideynin adı *</label>
+            <input id="parentName" name="parentName" required maxlength="100" placeholder="Adınız və soyadınız">
+          </div>
+          <div class="field">
+            <label for="phone">Əlaqə nömrəsi *</label>
+            <input id="phone" name="phone" required maxlength="30" placeholder="+994 XX XXX XX XX">
+          </div>
+          <div class="field">
+            <label for="childName">Uşağın adı *</label>
+            <input id="childName" name="childName" required maxlength="80" placeholder="Balacanın adı">
+          </div>
+          <div class="field">
+            <label for="childAge">Uşağın yaşı</label>
+            <input id="childAge" name="childAge" type="number" min="1" max="15" placeholder="Məs: 5">
+          </div>
+          <div class="field full">
+            <label for="packageSelect">Qiymət paketi *</label>
+            <select id="packageSelect" name="package" required>
+              <option value="">Paket seçin</option>
+              <option value="printed">Çap olunmuş kitab</option>
+              <option value="ebook">E-kitab (PDF)</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="details">Uşağın sevimli personajları / maraqları</label>
+            <textarea id="details" name="details" maxlength="1500" placeholder="Məs: Dinozavrlar, kosmos, sevimli iti Bobbi..."></textarea>
+          </div>
+        </div>
+        <label class="form-foot">
+          <input type="checkbox" id="privacyConsent" required>
+          <span>Sifarişi göndərməklə <a href="#privacy" style="color:var(--purple);text-decoration:underline">Məxfilik siyasəti</a> və <a href="#terms" style="color:var(--purple);text-decoration:underline">Xidmət şərtləri</a> ilə tanış olduğumu təsdiqləyirəm. *</span>
+        </label>
+        <button class="btn" type="submit" id="submitOrder">Sifarişi göndər <span>→</span></button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="terms">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><i></i> HÜQUQİ MƏLUMAT</span>
+        <h2>Xidmət Şərtləri</h2>
+        <p>Sifariş göndərməzdən əvvəl əsas şərtlərlə tanış olun.</p>
+      </div>
+      <div class="legal-grid">
+        <aside class="legal-nav">
+          <strong>Bu səhifədə</strong>
+          <a href="#terms-1">1. Ümumi şərtlər</a>
+          <a href="#terms-2">2. Xidmətin məzmunu</a>
+          <a href="#terms-3">3. Sifariş prosesi</a>
+          <a href="#terms-4">4. İstifadəçinin məsuliyyəti</a>
+          <a href="#terms-5">5. Fotoşəkillər</a>
+          <a href="#terms-6">6. Dəyişikliklər</a>
+          <a href="#terms-7">7. Ödəniş</a>
+          <a href="#terms-8">8. Hazırlanma müddəti</a>
+          <a href="#terms-9">9. Ləğv və geri qaytarma</a>
+          <a href="#terms-10">10. Müəlliflik hüququ</a>
+        </aside>
+        <article class="legal-content">
+          <p><strong>Gunel's Story</strong> fərdi uşaq kitablarının hazırlanması və təqdim edilməsi üzrə xidmət göstərir. Bu Xidmət Şərtləri saytdan istifadə və sifariş göndərilməsi üçün ümumi qaydaları izah edir.</p>
+          <h3 id="terms-1">1. Ümumi şərtlər</h3>
+          <p>Sifariş verməzdən əvvəl təqdim olunan məlumatların düzgünlüyünü yoxlamağınız xahiş olunur. Formanın göndərilməsi sifarişin avtomatik qəbul edilməsi demək deyil.</p>
+          <h3 id="terms-2">2. Xidmətin məzmunu</h3>
+          <p>Gunel's Story uşağın fərdi xüsusiyyətləri, adı, maraqları və təqdim olunan məlumatlar əsasında xüsusi hekayə və vizual materiallar hazırlayır:</p>
+          <ul>
+            <li>Fərdi uşaq hekayəsinin hazırlanması</li>
+            <li>Kitab səhifələrinin dizayn edilməsi</li>
+            <li>Təqdim olunan fotoşəkillərin layihəyə uyğunlaşdırılması</li>
+            <li>Çap və təqdimat üçün hazırlanmış kitab materiallarının formalaşdırılması</li>
+          </ul>
+          <h3 id="terms-3">3. Sifariş prosesi</h3>
+          <p>Sifarişin hazırlanması üçün istifadəçidən tələb olunan məlumatların tam və düzgün təqdim edilməsi vacibdir:</p>
+          <ul>
+            <li>Məlumatların təqdim edilməsi</li>
+            <li>Hekayənin hazırlanması</li>
+            <li>Dizayn mərhələsi</li>
+            <li>Yekun təqdimat</li>
+          </ul>
+          <h3 id="terms-4">4. İstifadəçinin məsuliyyəti</h3>
+          <p>İstifadəçi sifariş zamanı təqdim etdiyi məlumatların düzgünlüyünə və həmin məlumatlardan istifadə etmək hüququna malik olmasına görə <strong>məsuliyyət</strong> daşıyır.</p>
+          <ul>
+            <li>Təqdim olunan ad və məlumatların düzgün olması</li>
+            <li>Fotoşəkillərdən istifadə üçün lazımi hüquqa malik olması</li>
+            <li>Sifariş məlumatlarının yoxlanılması</li>
+            <li>Sifarişlə bağlı vacib dəyişikliklərin vaxtında bildirilməsi</li>
+          </ul>
+          <h3 id="terms-5">5. Fotoşəkillər və materiallar</h3>
+          <p>İstifadəçi tərəfindən təqdim olunan fotoşəkillər və digər materiallar yalnız sifarişin hazırlanması məqsədilə istifadə edilir.</p>
+          <h3 id="terms-6">6. Dəyişiklik və düzəlişlər</h3>
+          <p>Sifariş hazırlanarkən istifadəçi tərəfindən təqdim olunan məlumatların dəyişdirilməsi və ya düzəlişlərin edilməsi sifariş daxil olan vaxtdan <strong>24 saat</strong> müddətində mümkündür.</p>
+          <p>Dizayn və ya hekayə hazırlanması başa çatdıqdan sonra edilən əlavə dəyişikliklər əlavə iş tələb edir.</p>
+          <div class="info-box"><strong>Qeyd:</strong> Sifariş təsdiqlənməzdən əvvəl bütün məlumatları diqqətlə yoxlayın.</div>
+          <h3 id="terms-7">7. Ödəniş</h3>
+          <p>Xidmətin qiyməti Gunel's Story daxili xidmət siyasətinə uyğun olaraq hesablanmış və sabit tarif qəbul edilmişdir. Tariflə bağlı müvafiq bölməyə (Qiymətlər) baxmağınız xahiş olunur.</p>
+          <p>İstifadəçi sifariş yaratdığı zaman Məxfilik siyasətini və Xidmət şərtlərini qəbul etmiş hesab olunur.</p>
+          <h3 id="terms-8">8. Hazırlanma müddəti</h3>
+          <p>Fərdi kitabın hazırlanma müddəti sifarişin məzmunundan, layihənin həcmindən, hekayənin nəşr və dizayn üçün təqdim edildiyi üçüncü tərəflərin işlərindən və digər gözlənilməyən texniki işlərdən asılıdır.</p>
+          <h3 id="terms-9">9. Sifarişin ləğvi və geri qaytarılması</h3>
+          <p>Fərdi hazırlanmış məhsullar xüsusi olaraq konkret istifadəçi və uşaq üçün hazırlandığından sifarişin ləğvi və ödənişin geri qaytarılması Gunel's Story-nin daxili xidmət siyasətinə uyğun həyata keçirilir.</p>
+          <h3 id="terms-10">10. Müəlliflik və məzmun hüquqları</h3>
+          <p>Gunel's Story tərəfindən hazırlanmış hekayə, dizayn, illüstrasiya və digər yaradıcı materiallar müəlliflik hüququ ilə qorunur. Hazırlanan fərdi kitabın bütün müəlliflik hüququ Gunel's Story-ə məxsusdur.</p>
+          <p>Hazırlanmış fərdi məhsulun şəxsi istifadə məqsədilə istifadəsi ilə kommersiya məqsədilə çoxaldılması və yayılması eyni hüquqi məna daşımır.</p>
+          <div class="info-box">Bu şərtlər gələcəkdə yenilənə bilər. Yenilənmiş versiya bu səhifədə yayımlandığı tarixdən etibarən qüvvəyə minir.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="privacy">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow"><i></i> MƏXFİLİK</span>
+        <h2>Məxfilik Siyasəti</h2>
+        <p>Şəxsi məlumatların necə toplandığı və istifadə olunduğu haqqında.</p>
+      </div>
+      <div class="legal-grid">
+        <aside class="legal-nav">
+          <strong>Bu səhifədə</strong>
+          <a href="#privacy-1">1. Toplanan məlumatlar</a>
+          <a href="#privacy-2">2. İstifadə məqsədi</a>
+          <a href="#privacy-3">3. Saxlanma və təhlükəsizlik</a>
+          <a href="#privacy-4">4. Uşaqlara aid məlumatlar</a>
+          <a href="#privacy-5">5. Hüquqlarınız</a>
+          <a href="#privacy-6">6. Yenilənmə və əlaqə</a>
+        </aside>
+        <article class="legal-content">
+          <p>Bu Məxfilik Siyasəti Gunel's Story saytına müraciət edən şəxslərin təqdim etdiyi məlumatların işlənməsi qaydalarını açıqlayır.</p>
+          <h3 id="privacy-1">1. Toplana bilən məlumatlar</h3>
+          <p>Sifariş formasında valideynin adı, əlaqə nömrəsi, uşağın adı və yaşı, seçilən paket və hekayə ilə bağlı qeydlər təqdim edilə bilər. Yalnız müraciəti emal etmək üçün lazım olan məlumatları daxil edin.</p>
+          <h3 id="privacy-2">2. Məlumatlardan istifadə</h3>
+          <p>Məlumatlar sifariş müraciətini qəbul etmək, sifarişin detallarını dəqiqləşdirmək, müştəri ilə əlaqə saxlamaq və xidmətin hazırlanması üçün istifadə olunur. Məlumatlar reklam məqsədilə üçüncü tərəflərə satılmır.</p>
+          <h3 id="privacy-3">3. Saxlanma və təhlükəsizlik</h3>
+          <p>Saytın canlı versiyası Firebase / Cloud Firestore istifadə etdikdə sifariş məlumatları həmin xidmətin infrastrukturunda saxlanıla bilər. Məlumatların təhlükəsizliyi üçün uyğun giriş qaydaları və təhlükəsizlik parametrləri tətbiq edilir.</p>
+          <h3 id="privacy-4">4. Uşaqlara aid məlumatlar</h3>
+          <p>Sayt uşaqlar üçün xidmətlər təklif etsə də, sifariş forması valideyn və ya qanuni nümayəndə tərəfindən doldurulmalıdır. Uşağa aid yalnız sifarişin hazırlanması üçün zəruri məlumatları təqdim edin.</p>
+          <h3 id="privacy-5">5. Hüquqlarınız</h3>
+          <p>Şəxsi məlumatlarınıza düzəliş edilməsi və ya silinməsi barədə müraciət edə bilərsiniz. Hüquqi və əməliyyat öhdəliklərinə görə müəyyən məlumatların saxlanması zəruri ola bilər.</p>
+          <h3 id="privacy-6">6. Siyasətin yenilənməsi və əlaqə</h3>
+          <p>Bu siyasət xidmət və məlumat emalı qaydaları dəyişdikdə yenilənə bilər. Əlaqə üçün saytdakı sifariş formasından istifadə edin.</p>
+          <div class="info-box">Yayımdan əvvəl hüquqi mətnin faktiki məlumat emalı prosesinizə və qüvvədə olan qanunvericiliyə uyğunluğunu yoxlayın.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#home">
+          <span class="brand-mark">✦</span>
+          <span>Gunel’s Story<small>HƏR UŞAĞIN ÖZ HEKAYƏSİ</small></span>
+        </a>
+        <p>Balacalar üçün fərdi hekayələr, yaradıcı ideyalar və illərlə saxlanacaq xatirələr.</p>
+      </div>
+      <div>
+        <h3>Səhifələr</h3>
+        <div class="footer-links">
+          <a href="#about">Haqqımızda</a>
+          <a href="#pricing">Qiymətlər</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#order">Sifariş</a>
+        </div>
+      </div>
+      <div>
+        <h3>Hüquqi</h3>
+        <div class="footer-links">
+          <a href="#terms">Xidmət şərtləri</a>
+          <a href="#privacy">Məxfilik siyasəti</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© <span id="year"></span> Gunel’s Story. Bütün hüquqlar qorunur.</span>
+      <span>Kiçik xəyallara böyük sevgi ilə ✦</span>
+    </div>
+  </div>
+</footer>
+
+<div class="status" id="status" role="status"></div>
+
+<div class="notif-overlay" id="notifOverlay">
+  <div class="notif-card">
+    <button class="notif-close" id="notifClose">×</button>
+    <div style="font-size:1.8rem;margin-bottom:4px;">📢</div>
+    <div class="notif-title" id="notifTitle"></div>
+    <div class="notif-date" id="notifDate"></div>
+    <div class="notif-msg" id="notifMsg"></div>
+    <button class="btn notif-btn" id="notifOk">Başa düşdüm</button>
+  </div>
+</div>
+
+<div class="image-modal" id="imageModal">
+  <button class="modal-close-btn" id="modalCloseBtn">×</button>
+  <img src="" alt="" class="modal-image" id="modalImage">
+</div>
+
+<button class="sponsor-btn" id="openSponsor" title="Təklif / Sponsorluq">💬</button>
+<div class="modal-overlay" id="sponsorModal">
+  <div class="modal-sheet">
+    <div class="modal-header">
+      <h3>Təklif / Sponsorluq</h3>
+      <button class="close-x" id="closeSponsor">×</button>
+    </div>
+    <form id="sponsorForm">
+      <div class="field" style="margin-bottom:12px;">
+        <label>Adınız *</label>
+        <input id="sponsorName" required placeholder="Adınız və soyadınız">
+      </div>
+      <div class="field" style="margin-bottom:12px;">
+        <label>Əlaqə (telefon / email) *</label>
+        <input id="sponsorContact" required placeholder="+994... və ya email">
+      </div>
+      <div class="field" style="margin-bottom:16px;">
+        <label>Mesajınız *</label>
+        <textarea id="sponsorMessage" required rows="3" placeholder="Təklifinizi yazın..."></textarea>
+      </div>
+      <button class="btn" type="submit" style="width:100%;">Göndər</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDWqLPM2X89vyqOYocw4KEBh65WKMutZOI",
+    authDomain: "gunelsstory-6d3a9.firebaseapp.com",
+    projectId: "gunelsstory-6d3a9",
+    storageBucket: "gunelsstory-6d3a9.firebasestorage.app",
+    messagingSenderId: "903174908342",
+    appId: "1:903174908342:web:f73871214550442e553917",
+    measurementId: "G-5Q48RSFFH9"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  let statusTimer;
+  function notify(msg, type = '') {
+    const el = $('#status');
+    el.textContent = msg;
+    el.className = 'status show ' + type;
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(() => el.className = 'status', 4500);
+  }
+
+  $('#menuToggle').addEventListener('click', () => $('#navlinks').classList.toggle('open'));
+  $('#navlinks').addEventListener('click', e => { if (e.target.closest('a')) $('#navlinks').classList.remove('open'); });
+  $('#year').textContent = new Date().getFullYear();
+
+  function renderPricing(data) {
+    const grid = $('#priceGrid');
+    if (!data) {
+      grid.innerHTML = `<div class="empty-note">Qiymət məlumatı tapılmadı</div>`;
+      return;
+    }
+    const printedActive = data.printedIsActive || false;
+    const ebookActive = data.ebookIsActive || false;
+    const printedBase = data.printedBasePrice ?? 80;
+    const printedSale = data.printedSalePrice ?? 80;
+    const printedTitle = data.printedCampaignTitle || '';
+    const printedPercent = data.printedDiscountPercent || 0;
+    const ebookBase = data.ebookBasePrice ?? 25;
+    const ebookSale = data.ebookSalePrice ?? 25;
+    const ebookTitle = data.ebookCampaignTitle || '';
+    const ebookPercent = data.ebookDiscountPercent || 0;
+
+    grid.innerHTML = `
+      <article class="price-card featured">
+        <span class="popular">Ən çox seçilən</span>
+        <h3>Çap olunmuş kitab</h3>
+        <p>Premium kağız, HD rənglər və hədiyyə qablaşdırması ilə.</p>
+        ${printedActive && printedSale < printedBase ? `
+          <div class="campaign-title">${esc(printedTitle)}</div>
+          <div class="discount-badge">-${printedPercent}%</div>
+          <div class="price"><span class="old-price">${printedBase} ₼</span>${printedSale} <small>AZN</small></div>
+        ` : `<div class="price">${printedBase} <small>AZN</small></div>`}
+        <ul>
+          <li>Fərdi hekayə</li>
+          <li>Uşağın şəkli ilə dizayn</li>
+          <li>Premium keyfiyyətli çap</li>
+          <li>Hədiyyə qablaşdırması</li>
+        </ul>
+        <button class="btn choose-package" data-package="printed">Bu paketi seç</button>
+      </article>
+      <article class="price-card">
+        <h3>E-kitab (PDF)</h3>
+        <p>Rəqəmsal formatda dərhal əldə edin.</p>
+        ${ebookActive && ebookSale < ebookBase ? `
+          <div class="campaign-title">${esc(ebookTitle)}</div>
+          <div class="discount-badge">-${ebookPercent}%</div>
+          <div class="price"><span class="old-price">${ebookBase} ₼</span>${ebookSale} <small>AZN</small></div>
+        ` : `<div class="price">${ebookBase} <small>AZN</small></div>`}
+        <ul>
+          <li>Fərdi hekayə</li>
+          <li>Uşağın şəkli ilə dizayn</li>
+          <li>PDF format</li>
+          <li>Dərhal yükləmə</li>
+        </ul>
+        <button class="btn outline choose-package" data-package="ebook">Bu paketi seç</button>
+      </article>
+    `;
+  }
+
+  db.collection('adminConfig').doc('pricing').onSnapshot(doc => {
+    renderPricing(doc.exists ? doc.data() : null);
+  }, err => {
+    console.error('Pricing error:', err);
+    $('#priceGrid').innerHTML = `<div class="empty-note">Qiymətlər yüklənə bilmədi</div>`;
+  });
+
+  function createPortfolioCard(item) {
+    const title = item.title || 'Adsız kitab';
+    const author = item.author || 'Psixoloq Günel Mahmudqızı';
+    const img = item.imageUrl || '';
+    return `
+      <article class="work-card">
+        <div class="work-art">
+          ${img ? `<img src="${esc(img)}" alt="${esc(title)}" loading="lazy">` : `<div style="font-size:40px;">📖</div>`}
+          ${img ? `
+            <button type="button" class="view-btn" data-image="${esc(img)}" data-title="${esc(title)}" aria-label="Şəklə bax">
+              <svg viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          ` : ''}
+        </div>
+        <div class="work-meta">
+          <small>${esc(author)}</small>
+          <h3>${esc(title)}</h3>
+        </div>
+      </article>
+    `;
+  }
+
+  let portfolioExpanded = false;
+
+  db.collection('portfolio').orderBy('createdAt', 'desc').onSnapshot(snap => {
+    const grid = $('#portfolioGrid');
+    const toggleWrap = $('#portfolioToggle');
+    const toggleBtn = $('#portfolioToggleBtn');
+    const toggleText = $('#toggleText');
+
+    if (snap.empty) {
+      grid.innerHTML = `<div class="empty-note">Hələ portfolio nümunəsi yoxdur</div>`;
+      toggleWrap.style.display = 'none';
+      return;
+    }
+
+    let html = '';
+    snap.forEach(doc => html += createPortfolioCard(doc.data()));
+    grid.innerHTML = html;
+
+    if (snap.size > 2) {
+      toggleWrap.style.display = 'flex';
+      grid.classList.add('collapsed');
+      portfolioExpanded = false;
+      toggleBtn.classList.remove('open');
+      toggleText.textContent = 'Hamısını göstər';
+    } else {
+      toggleWrap.style.display = 'none';
+      grid.classList.remove('collapsed');
+    }
+  }, err => {
+    console.error('Portfolio error:', err);
+    $('#portfolioGrid').innerHTML = `<div class="empty-note">Portfolio yüklənə bilmədi</div>`;
+  });
+
+  document.getElementById('portfolioToggleBtn').addEventListener('click', function() {
+    const grid = $('#portfolioGrid');
+    const toggleText = $('#toggleText');
+    portfolioExpanded = !portfolioExpanded;
+    if (portfolioExpanded) {
+      grid.classList.remove('collapsed');
+      this.classList.add('open');
+      toggleText.textContent = 'Daha az göstər';
+    } else {
+      grid.classList.add('collapsed');
+      this.classList.remove('open');
+      toggleText.textContent = 'Hamısını göstər';
+      document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  const imageModal = $('#imageModal');
+  const modalImage = $('#modalImage');
+  const modalCloseBtn = $('#modalCloseBtn');
+
+  function openImageModal(url, title) {
+    if (!url) return;
+    modalImage.src = url;
+    modalImage.alt = title || 'Kitab';
+    imageModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeImageModal() {
+    imageModal.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      if (!imageModal.classList.contains('active')) {
+        modalImage.src = '';
+        modalImage.alt = '';
+      }
+    }, 300);
+  }
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.view-btn');
+    if (btn) {
+      e.preventDefault();
+      e.stopPropagation();
+      openImageModal(btn.dataset.image, btn.dataset.title);
+    }
+  });
+  modalCloseBtn.addEventListener('click', closeImageModal);
+  imageModal.addEventListener('click', e => { if (e.target === imageModal) closeImageModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && imageModal.classList.contains('active')) closeImageModal();
+  });
+
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.choose-package');
+    if (btn) {
+      $('#packageSelect').value = btn.dataset.package;
+      $('#order').scrollIntoView({ behavior: 'smooth' });
+      $('#parentName').focus({ preventScroll: true });
+    }
+  });
+
+  $('#orderForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    if (!form.reportValidity()) return;
+    const data = Object.fromEntries(new FormData(form).entries());
+    const btn = $('#submitOrder');
+    btn.disabled = true;
+    btn.textContent = 'Göndərilir...';
+    try {
+      await db.collection('orders').add({
+        parentName: data.parentName.trim(),
+        parentPhone: data.phone.trim(),
+        childName: data.childName.trim(),
+        childAge: data.childAge ? Number(data.childAge) : null,
+        childInterests: data.details ? data.details.trim() : '',
+        package: data.package,
+        isViewed: false,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      form.reset();
+      notify('Sifariş müraciətiniz uğurla göndərildi! Tezliklə sizinlə əlaqə saxlayacağıq.', 'success');
+    } catch (err) {
+      console.error(err);
+      notify('Xəta baş verdi. Zəhmət olmasa yenidən cəhd edin.', 'error');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = 'Sifarişi göndər <span>→</span>';
+    }
+  });
+
+  $('#openSponsor').addEventListener('click', () => $('#sponsorModal').classList.add('active'));
+  $('#closeSponsor').addEventListener('click', () => $('#sponsorModal').classList.remove('active'));
+  $('#sponsorModal').addEventListener('click', e => { if (e.target === $('#sponsorModal')) $('#sponsorModal').classList.remove('active'); });
+
+  $('#sponsorForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = $('#sponsorName').value.trim();
+    const contact = $('#sponsorContact').value.trim();
+    const message = $('#sponsorMessage').value.trim();
+    if (!name || !contact || !message) return;
+    try {
+      const ticketId = 'TKT-' + Math.floor(1000 + Math.random() * 9000);
+      await db.collection('sponsorships').add({
+        name, contact, message, ticketId,
+        isViewed: false,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      $('#sponsorForm').reset();
+      $('#sponsorModal').classList.remove('active');
+      notify('Təklifiniz uğurla göndərildi. Təşəkkür edirik!', 'success');
+    } catch (err) {
+      console.error(err);
+      notify('Xəta baş verdi.', 'error');
+    }
+  });
+
+  let shownNotifIds = JSON.parse(localStorage.getItem('shownNotifs') || '[]');
+
+  function showNotification(data, id) {
+    if (shownNotifIds.includes(id)) return;
+    $('#notifTitle').textContent = data.title || 'Bildiriş';
+    $('#notifMsg').textContent = data.message || '';
+    let dateStr = '';
+    if (data.createdAt && data.createdAt.toDate) {
+      const date = data.createdAt.toDate();
+      dateStr = date.toLocaleDateString('az-AZ', { day: '2-digit', month: 'long', year: 'numeric' });
+    }
+    $('#notifDate').textContent = dateStr;
+    $('#notifOverlay').classList.add('active');
+
+    const close = () => {
+      $('#notifOverlay').classList.remove('active');
+      if (!shownNotifIds.includes(id)) {
+        shownNotifIds.push(id);
+        localStorage.setItem('shownNotifs', JSON.stringify(shownNotifIds.slice(-30)));
+      }
+    };
+    $('#notifClose').onclick = close;
+    $('#notifOk').onclick = close;
+    $('#notifOverlay').onclick = (e) => { if (e.target === $('#notifOverlay')) close(); };
+  }
+
+  db.collection('notifications').where('isActive', '==', true).get()
+    .then(snap => {
+      if (snap.empty) return;
+      let latest = null, latestId = null, latestTime = 0;
+      snap.forEach(doc => {
+        const data = doc.data();
+        const time = data.createdAt && data.createdAt.toMillis ? data.createdAt.toMillis() : 0;
+        if (time >= latestTime) { latestTime = time; latest = data; latestId = doc.id; }
+      });
+      if (latest && latestId) setTimeout(() => showNotification(latest, latestId), 1200);
+    })
+    .catch(err => console.error('Bildiriş yüklənmədi:', err));
+
+  db.collection('notifications').where('isActive', '==', true)
+    .onSnapshot(snap => {
+      snap.docChanges().forEach(change => {
+        if (change.type === 'added' || change.type === 'modified') {
+          const data = change.doc.data();
+          if (data.isActive) showNotification(data, change.doc.id);
+        }
+      });
+    }, err => console.log('Realtime bildiriş:', err.message));
+</script>
+</body>
+</html>
