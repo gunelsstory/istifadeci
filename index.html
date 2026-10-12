@@ -113,7 +113,7 @@ button { cursor: pointer; }
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   transition: transform .25s, box-shadow .25s, border-color .25s;
 }
 .price-card:hover {
@@ -420,11 +420,15 @@ button { cursor: pointer; }
 
   .price-grid {
     display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; gap: 12px; padding: 0 2px 12px;
+    -webkit-overflow-scrolling: touch; gap: 12px; padding: 10px 15px 12px; /* Sağdan-soldan padding əlavə olunur */
     max-width: 100%; scrollbar-width: none;
   }
   .price-grid::-webkit-scrollbar { display: none; }
-  .price-card { flex: 0 0 82%; max-width: 290px; scroll-snap-align: center; margin: 0; padding: 22px 18px; border-radius: 18px; }
+  .price-card { 
+    flex: 0 0 82%; max-width: 290px; scroll-snap-align: center; margin: 0; padding: 22px 18px; border-radius: 18px; 
+    overflow: visible !important; /* Mobildə də kəsilmənin qarşısını alır */
+    margin-top: 10px; /* Lentin üstdən yerləşməsi üçün */
+  }
   .price-icon { width: 42px; height: 42px; border-radius: 12px; margin-bottom: 12px; }
   .price-icon svg { width: 20px; height: 20px; }
   .price-card h3 { font-size: 17px; }
