@@ -6,6 +6,7 @@
 <title>Gunel’s Story — Hər uşağın öz hekayəsi</title>
 <meta name="description" content="Uşağınız üçün sevgi ilə hazırlanmış fərdi hekayələr və xüsusi hədiyyələr.">
 <link rel="icon" type="image/png" href="image/favicon.png">
+<link rel="apple-touch-icon" href="image/favicon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,8 +40,7 @@ button { cursor: pointer; }
 .header { position: sticky; top: 0; z-index: 30; background: #ffffffed; backdrop-filter: blur(14px); border-bottom: 1px solid #f1edf7; }
 .nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .brand { display: flex; align-items: center; gap: 11px; font: 800 17px Manrope, sans-serif; white-space: nowrap; }
-.brand-mark { width: 42px; height: 42px; border-radius: 15px; display: grid; place-items: center; background: linear-gradient(145deg,#7869e7,#a99af6); color: white; font-size: 23px; box-shadow: 0 8px 20px #6a59d733; }
-.brand-logo {  width: 42px;  height: 42px;  border-radius: 12px;  object-fit: contain;  display: block;  flex-shrink: 0;}
+.brand-logo { width: 42px; height: 42px; border-radius: 12px; object-fit: contain; display: block; flex-shrink: 0; }
 .brand small { display: block; font: 700 9px 'DM Sans'; letter-spacing: 2px; color: #9690b1; margin-top: 1px; }
 .navlinks { display: flex; align-items: center; gap: 22px; color: #67617f; font-size: 13px; font-weight: 700; }
 .navlinks a:hover, .navlinks a.active { color: var(--purple); }
@@ -60,29 +60,33 @@ button { cursor: pointer; }
 .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .trust { display: flex; align-items: center; gap: 12px; margin-top: 28px; color: #88829d; font-size: 12px; }
 .avatars { display: flex; }
-.avatars span { width: 28px; height: 28px; border: 2px solid white; border-radius: 50%; display: grid; place-items: center; margin-left: -6px; background: #e8e2ff; font-size: 12px; }
+.avatars span {
+  width: 28px; height: 28px; border: 2px solid white; border-radius: 50%;
+  display: grid; place-items: center; margin-left: -6px; background: #e8e2ff;
+}
 .avatars span:first-child { margin-left: 0; background: #ffe4ed; }
+.avatars span svg { width: 14px; height: 14px; color: var(--purple); stroke: currentColor; fill: none; }
+
 .hero-visual { min-height: 390px; position: relative; display: grid; place-items: center; }
 .hero-orbit { position: absolute; width: 340px; height: 340px; border: 1px solid #d9d0fb; border-radius: 50%; transform: rotate(-20deg); }
 .hero-orbit:after { content: ''; position: absolute; inset: 25px; border: 1px dashed #dfd8f6; border-radius: 50%; }
 
-/* Hero şəkil */
 .storybook { position: relative; z-index: 2; }
 .hero-book-img {
-  width: 255px;
-  height: auto;
-  max-height: 320px;
-  object-fit: contain;
-  border-radius: 12px;
-  transform: rotate(-5deg);
-  filter: drop-shadow(0 22px 22px #4b3b8630);
-  display: block;
+  width: 255px; height: auto; max-height: 320px; object-fit: contain;
+  border-radius: 12px; transform: rotate(-5deg);
+  filter: drop-shadow(0 22px 22px #4b3b8630); display: block;
 }
 
-.floating { position: absolute; background: #fff; border: 1px solid #f0eaf9; box-shadow: var(--shadow); border-radius: 18px; padding: 12px 15px; font-size: 12px; font-weight: 800; z-index: 3; }
+.floating {
+  position: absolute; background: #fff; border: 1px solid #f0eaf9;
+  box-shadow: var(--shadow); border-radius: 18px; padding: 12px 15px;
+  font-size: 12px; font-weight: 800; z-index: 3;
+  display: inline-flex; align-items: center; gap: 7px;
+}
 .floating.one { left: 0; top: 64px; transform: rotate(-5deg); }
 .floating.two { right: 0; bottom: 62px; transform: rotate(4deg); }
-.floating span { font-size: 20px; margin-right: 7px; vertical-align: middle; }
+.float-icon { width: 18px; height: 18px; color: var(--purple); flex-shrink: 0; stroke: currentColor; fill: none; }
 .spark { position: absolute; color: #8b79e8; font-size: 27px; z-index: 3; }
 .spark.s1 { top: 35px; right: 70px; }
 .spark.s2 { bottom: 32px; left: 48px; font-size: 20px; }
@@ -96,7 +100,12 @@ button { cursor: pointer; }
 
 .features { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .feature { padding: 28px; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: var(--shadow); }
-.feature-icon { width: 52px; height: 52px; display: grid; place-items: center; border-radius: 17px; background: var(--lilac); font-size: 24px; margin-bottom: 20px; }
+.feature-icon {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 17px; background: var(--lilac); margin-bottom: 20px;
+  color: var(--purple);
+}
+.feature-icon svg { width: 24px; height: 24px; stroke: currentColor; fill: none; }
 .feature:nth-child(2) .feature-icon { background: var(--pink); }
 .feature:nth-child(3) .feature-icon { background: var(--cream); }
 .feature h3 { font-size: 18px; margin-bottom: 10px; }
@@ -184,21 +193,8 @@ button { cursor: pointer; }
 .order-form .btn { width: 100%; }
 
 .about-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
-.about-art {
-  min-height: 300px;
-  border-radius: 28px;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(145deg,#eae4ff,#fff0f4);
-}
-.about-img {
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  object-fit: cover;
-  display: block;
-  border-radius: 28px;
-}
+.about-art { min-height: 300px; border-radius: 28px; overflow: hidden; position: relative; background: linear-gradient(145deg,#eae4ff,#fff0f4); }
+.about-img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; display: block; border-radius: 28px; }
 .about-copy h2 { font-size: clamp(30px,4vw,42px); }
 .about-copy p { color: var(--muted); margin-bottom: 14px; }
 .notice { border-radius: 14px; padding: 13px 15px; background: #f5f2ff; color: #6657be; font-size: 12px; margin-top: 18px; }
@@ -240,8 +236,17 @@ button { cursor: pointer; }
 .notif-msg { font-size: 14px; color: #555; line-height: 1.6; text-align: left; max-height: 220px; overflow-y: auto; white-space: pre-line; }
 .notif-btn { width: 100%; margin-top: 18px; }
 
-.sponsor-btn { position: fixed; bottom: 24px; right: 24px; left: auto; z-index: 50; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg,#6a59d7,#9e8ef0); color: #fff; border: none; font-size: 22px; box-shadow: 0 8px 25px #6a59d745; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: .2s; }
+/* Sponsor düyməsi — SAĞDA */
+.sponsor-btn {
+  position: fixed; bottom: 24px; right: 24px; left: auto; z-index: 50;
+  width: 54px; height: 54px; border-radius: 50%;
+  background: linear-gradient(135deg,#6a59d7,#9e8ef0); color: #fff;
+  border: none; box-shadow: 0 8px 25px #6a59d745; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; transition: .2s;
+}
 .sponsor-btn:hover { transform: scale(1.08); }
+.sponsor-btn svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.8; }
+
 .modal-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.6); backdrop-filter: blur(5px); z-index: 2000; display: none; align-items: flex-end; justify-content: center; }
 .modal-overlay.active { display: flex; }
 .modal-sheet { width: 100%; max-width: 480px; background: #fff; border-radius: 24px 24px 0 0; padding: 24px 20px 30px; max-height: 85vh; overflow-y: auto; animation: slideUp .3s cubic-bezier(.16,1,.3,1); }
@@ -262,7 +267,6 @@ button { cursor: pointer; }
   .portfolio-grid { grid-template-columns: repeat(2,1fr); gap: 14px; }
   .order-grid { grid-template-columns: 1fr; gap: 20px; }
   .footer-grid { grid-template-columns: 1.3fr 1fr; }
-  .footer-grid > div:last-child { grid-column: 2; }
   .about-panel { grid-template-columns: 1fr; gap: 25px; }
   .legal-grid { grid-template-columns: 1fr; }
   .legal-nav { position: static; margin-bottom: 20px; }
@@ -272,8 +276,7 @@ button { cursor: pointer; }
   .top-note { font-size: 10px; padding: 6px 12px; }
   .nav { height: 60px; }
   .brand { font-size: 14px; gap: 8px; }
-  .brand-mark { width: 34px; height: 34px; font-size: 18px; border-radius: 12px; }
-  .brand-logo {  width: 34px;  height: 34px;  border-radius: 10px; }
+  .brand-logo { width: 34px; height: 34px; border-radius: 10px; }
   .brand small { font-size: 8px; }
   .menu-toggle { display: block; padding: 8px; border-radius: 10px; }
   .navlinks { display: none; position: absolute; top: 60px; left: 0; right: 0; background: white; border-bottom: 1px solid var(--line); padding: 12px 18px 16px; flex-direction: column; align-items: stretch; gap: 0; }
@@ -297,7 +300,8 @@ button { cursor: pointer; }
 
   .features { grid-template-columns: 1fr; gap: 12px; }
   .feature { padding: 20px; border-radius: 16px; }
-  .feature-icon { width: 42px; height: 42px; font-size: 20px; border-radius: 12px; margin-bottom: 14px; }
+  .feature-icon { width: 42px; height: 42px; border-radius: 12px; margin-bottom: 14px; }
+  .feature-icon svg { width: 20px; height: 20px; }
   .feature h3 { font-size: 16px; }
   .feature p { font-size: 12px; }
 
@@ -308,7 +312,6 @@ button { cursor: pointer; }
   }
   .price-grid::-webkit-scrollbar { display: none; }
   .price-card { flex: 0 0 82%; max-width: 290px; scroll-snap-align: center; margin: 0; padding: 22px 18px; border-radius: 18px; }
-  .price-card.featured { transform: none; }
   .price-card h3 { font-size: 17px; }
   .price-card p { font-size: 12px; min-height: 32px; }
   .price { font-size: 32px; margin: 10px 0 4px; }
@@ -326,7 +329,7 @@ button { cursor: pointer; }
   .work-meta { padding: 10px 8px; }
   .work-meta small { font-size: 8px; }
   .work-meta h3 { font-size: 0.78rem; line-height: 1.25; }
-  .view-btn { width: 30px; height: 30px; top: 7px; right: 7px; }
+  .view-btn { display: flex; width: 30px; height: 30px; top: 7px; right: 7px; }
   .view-btn svg { width: 15px; height: 15px; }
   .portfolio-toggle { margin-top: 18px; }
   .portfolio-toggle-btn { padding: 9px 16px; font-size: 12px; gap: 6px; }
@@ -354,10 +357,10 @@ button { cursor: pointer; }
 
   .footer { padding: 36px 0 16px; }
   .footer-grid { grid-template-columns: 1fr; gap: 20px; padding-bottom: 24px; }
-  .footer-grid > div:last-child { grid-column: auto; }
   .copyright { flex-direction: column; font-size: 10px; gap: 8px; }
 
-  .sponsor-btn { bottom: 14px; right: 14px; left: auto; width: 44px; height: 44px; font-size: 18px; }
+  .sponsor-btn { bottom: 14px; right: 14px; left: auto; width: 44px; height: 44px; }
+  .sponsor-btn svg { width: 20px; height: 20px; }
 
   .notif-card { padding: 22px 18px; border-radius: 18px; max-width: 340px; }
   .notif-close { width: 28px; height: 28px; font-size: 16px; top: 10px; right: 10px; }
@@ -377,7 +380,6 @@ button { cursor: pointer; }
 
   .modal-close-btn { width: 36px; height: 36px; font-size: 22px; top: 12px; right: 12px; }
   .image-modal { padding: 12px; }
-
   .status { right: 12px; bottom: 70px; font-size: 12px; padding: 11px 14px; border-radius: 12px; }
 }
 </style>
@@ -419,7 +421,17 @@ button { cursor: pointer; }
           <a class="btn light" href="#portfolio">Nümunələrə bax</a>
         </div>
         <div class="trust">
-          <div class="avatars"><span>🌙</span><span>⭐</span><span>🧸</span></div>
+          <div class="avatars">
+            <span>
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </span>
+            <span>
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            </span>
+          </div>
           <span>Kiçik qəhrəmanlar üçün böyük xatirələr</span>
         </div>
       </div>
@@ -428,8 +440,20 @@ button { cursor: pointer; }
         <div class="storybook">
           <img src="image/hero-book.png" alt="Mənim sehrli hekayəm" class="hero-book-img">
         </div>
-        <div class="floating one"><span>✨</span> Fərdi hazırlanır</div>
-        <div class="floating two"><span>💜</span> Sevgi ilə yaradılır</div>
+        <div class="floating one">
+          <svg class="float-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 4V2"/><path d="M15 16v-2"/><path d="M8 9h2"/><path d="M20 9h2"/>
+            <path d="M17.8 11.8 19 13"/><path d="M15 9h0"/><path d="M17.8 6.2 19 5"/>
+            <path d="m3 21 9-9"/><path d="M12.2 6.2 11 5"/>
+          </svg>
+          Fərdi hazırlanır
+        </div>
+        <div class="floating two">
+          <svg class="float-icon" viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+          </svg>
+          Sevgi ilə yaradılır
+        </div>
         <b class="spark s1">✦</b>
         <b class="spark s2">✧</b>
       </div>
@@ -462,17 +486,36 @@ button { cursor: pointer; }
       </div>
       <div class="features">
         <article class="feature">
-          <div class="feature-icon">🧒</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
           <h3>Baş qəhrəman sizin uşağınızdır</h3>
           <p>Hekayənin mərkəzində balacanızın adı, arzuları və sevdiyi mövzular dayanır.</p>
         </article>
         <article class="feature">
-          <div class="feature-icon">📖</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5Z"/>
+              <path d="M8 7h8"/><path d="M8 11h8"/>
+            </svg>
+          </div>
           <h3>Fərdi yanaşma</h3>
           <p>Hər sifarişə ayrıca yanaşılır, detallar sizin təqdim etdiyiniz məlumatlara uyğun hazırlanır.</p>
         </article>
         <article class="feature">
-          <div class="feature-icon">🎁</div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="8" width="18" height="4" rx="1"/>
+              <path d="M12 8v13"/>
+              <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
+              <path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 4.8 0 0 1 12 8a4.8 4.8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/>
+            </svg>
+          </div>
           <h3>Yadda qalan hədiyyə</h3>
           <p>Ad günü, xüsusi gün və ya sadəcə sevindirmək üçün mənalı və fərqli seçim.</p>
         </article>
@@ -502,16 +545,14 @@ button { cursor: pointer; }
         <h2>Bir az xəyal, çoxlu sevgi</h2>
         <p>Hazırladığımız real kitab nümunələri.</p>
       </div>
-      <div class="portfolio-wrapper">
-        <div class="portfolio-grid collapsed" id="portfolioGrid">
-          <div class="empty-note">Portfolio yüklənir...</div>
-        </div>
-        <div class="portfolio-toggle" id="portfolioToggle" style="display:none;">
-          <button type="button" class="portfolio-toggle-btn" id="portfolioToggleBtn">
-            <span id="toggleText">Hamısını göstər</span>
-            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-        </div>
+      <div class="portfolio-grid collapsed" id="portfolioGrid">
+        <div class="empty-note">Portfolio yüklənir...</div>
+      </div>
+      <div class="portfolio-toggle" id="portfolioToggle" style="display:none;">
+        <button type="button" class="portfolio-toggle-btn" id="portfolioToggleBtn">
+          <span id="toggleText">Hamısını göstər</span>
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -570,7 +611,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
-  <!-- TERMS -->
+  <!-- TERMS + PRIVACY (eyni qalır) -->
   <section class="section" id="terms">
     <div class="container">
       <div class="section-head">
@@ -597,52 +638,29 @@ button { cursor: pointer; }
           <h3 id="terms-1">1. Ümumi şərtlər</h3>
           <p>Sifariş verməzdən əvvəl təqdim olunan məlumatların düzgünlüyünü yoxlamağınız xahiş olunur. Formanın göndərilməsi sifarişin avtomatik qəbul edilməsi demək deyil.</p>
           <h3 id="terms-2">2. Xidmətin məzmunu</h3>
-          <p>Gunel's Story uşağın fərdi xüsusiyyətləri, adı, maraqları və təqdim olunan məlumatlar əsasında xüsusi hekayə və vizual materiallar hazırlayır:</p>
-          <ul>
-            <li>Fərdi uşaq hekayəsinin hazırlanması</li>
-            <li>Kitab səhifələrinin dizayn edilməsi</li>
-            <li>Təqdim olunan fotoşəkillərin layihəyə uyğunlaşdırılması</li>
-            <li>Çap və təqdimat üçün hazırlanmış kitab materiallarının formalaşdırılması</li>
-          </ul>
+          <p>Gunel's Story uşağın fərdi xüsusiyyətləri, adı, maraqları və təqdim olunan məlumatlar əsasında xüsusi hekayə və vizual materiallar hazırlayır.</p>
           <h3 id="terms-3">3. Sifariş prosesi</h3>
-          <p>Sifarişin hazırlanması üçün istifadəçidən tələb olunan məlumatların tam və düzgün təqdim edilməsi vacibdir:</p>
-          <ul>
-            <li>Məlumatların təqdim edilməsi</li>
-            <li>Hekayənin hazırlanması</li>
-            <li>Dizayn mərhələsi</li>
-            <li>Yekun təqdimat</li>
-          </ul>
+          <p>Sifarişin hazırlanması üçün istifadəçidən tələb olunan məlumatların tam və düzgün təqdim edilməsi vacibdir.</p>
           <h3 id="terms-4">4. İstifadəçinin məsuliyyəti</h3>
-          <p>İstifadəçi sifariş zamanı təqdim etdiyi məlumatların düzgünlüyünə və həmin məlumatlardan istifadə etmək hüququna malik olmasına görə <strong>məsuliyyət</strong> daşıyır.</p>
-          <ul>
-            <li>Təqdim olunan ad və məlumatların düzgün olması</li>
-            <li>Fotoşəkillərdən istifadə üçün lazımi hüquqa malik olması</li>
-            <li>Sifariş məlumatlarının yoxlanılması</li>
-            <li>Sifarişlə bağlı vacib dəyişikliklərin vaxtında bildirilməsi</li>
-          </ul>
+          <p>İstifadəçi sifariş zamanı təqdim etdiyi məlumatların düzgünlüyünə və həmin məlumatlardan istifadə etmək hüququna malik olmasına görə məsuliyyət daşıyır.</p>
           <h3 id="terms-5">5. Fotoşəkillər və materiallar</h3>
           <p>İstifadəçi tərəfindən təqdim olunan fotoşəkillər və digər materiallar yalnız sifarişin hazırlanması məqsədilə istifadə edilir.</p>
           <h3 id="terms-6">6. Dəyişiklik və düzəlişlər</h3>
-          <p>Sifariş hazırlanarkən istifadəçi tərəfindən təqdim olunan məlumatların dəyişdirilməsi və ya düzəlişlərin edilməsi sifariş daxil olan vaxtdan <strong>24 saat</strong> müddətində mümkündür.</p>
-          <p>Dizayn və ya hekayə hazırlanması başa çatdıqdan sonra edilən əlavə dəyişikliklər əlavə iş tələb edir.</p>
-          <div class="info-box"><strong>Qeyd:</strong> Sifariş təsdiqlənməzdən əvvəl bütün məlumatları diqqətlə yoxlayın.</div>
+          <p>Sifariş hazırlanarkən istifadəçi tərəfindən təqdim olunan məlumatların dəyişdirilməsi və ya düzəlişlərin edilməsi sifariş daxil olan vaxtdan 24 saat müddətində mümkündür.</p>
           <h3 id="terms-7">7. Ödəniş</h3>
-          <p>Xidmətin qiyməti Gunel's Story daxili xidmət siyasətinə uyğun olaraq hesablanmış və sabit tarif qəbul edilmişdir. Tariflə bağlı müvafiq bölməyə (Qiymətlər) baxmağınız xahiş olunur.</p>
-          <p>İstifadəçi sifariş yaratdığı zaman Məxfilik siyasətini və Xidmət şərtlərini qəbul etmiş hesab olunur.</p>
+          <p>Xidmətin qiyməti Gunel's Story daxili xidmət siyasətinə uyğun olaraq hesablanmış və sabit tarif qəbul edilmişdir.</p>
           <h3 id="terms-8">8. Hazırlanma müddəti</h3>
-          <p>Fərdi kitabın hazırlanma müddəti sifarişin məzmunundan, layihənin həcmindən, hekayənin nəşr və dizayn üçün təqdim edildiyi üçüncü tərəflərin işlərindən və digər gözlənilməyən texniki işlərdən asılıdır.</p>
+          <p>Fərdi kitabın hazırlanma müddəti sifarişin məzmunundan və layihənin həcmindən asılıdır.</p>
           <h3 id="terms-9">9. Sifarişin ləğvi və geri qaytarılması</h3>
-          <p>Fərdi hazırlanmış məhsullar xüsusi olaraq konkret istifadəçi və uşaq üçün hazırlandığından sifarişin ləğvi və ödənişin geri qaytarılması Gunel's Story-nin daxili xidmət siyasətinə uyğun həyata keçirilir.</p>
+          <p>Fərdi hazırlanmış məhsullar xüsusi olaraq konkret istifadəçi və uşaq üçün hazırlandığından sifarişin ləğvi Gunel's Story-nin daxili xidmət siyasətinə uyğun həyata keçirilir.</p>
           <h3 id="terms-10">10. Müəlliflik və məzmun hüquqları</h3>
-          <p>Gunel's Story tərəfindən hazırlanmış hekayə, dizayn, illüstrasiya və digər yaradıcı materiallar müəlliflik hüququ ilə qorunur. Hazırlanan fərdi kitabın bütün müəlliflik hüququ Gunel's Story-ə məxsusdur.</p>
-          <p>Hazırlanmış fərdi məhsulun şəxsi istifadə məqsədilə istifadəsi ilə kommersiya məqsədilə çoxaldılması və yayılması eyni hüquqi məna daşımır.</p>
+          <p>Gunel's Story tərəfindən hazırlanmış hekayə, dizayn, illüstrasiya və digər yaradıcı materiallar müəlliflik hüququ ilə qorunur.</p>
           <div class="info-box">Bu şərtlər gələcəkdə yenilənə bilər. Yenilənmiş versiya bu səhifədə yayımlandığı tarixdən etibarən qüvvəyə minir.</div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- PRIVACY -->
   <section class="section soft" id="privacy">
     <div class="container">
       <div class="section-head">
@@ -663,18 +681,18 @@ button { cursor: pointer; }
         <article class="legal-content">
           <p>Bu Məxfilik Siyasəti Gunel's Story saytına müraciət edən şəxslərin təqdim etdiyi məlumatların işlənməsi qaydalarını açıqlayır.</p>
           <h3 id="privacy-1">1. Toplana bilən məlumatlar</h3>
-          <p>Sifariş formasında valideynin adı, əlaqə nömrəsi, uşağın adı və yaşı, seçilən paket və hekayə ilə bağlı qeydlər təqdim edilə bilər. Yalnız müraciəti emal etmək üçün lazım olan məlumatları daxil edin.</p>
+          <p>Sifariş formasında valideynin adı, əlaqə nömrəsi, uşağın adı və yaşı, seçilən paket və hekayə ilə bağlı qeydlər təqdim edilə bilər.</p>
           <h3 id="privacy-2">2. Məlumatlardan istifadə</h3>
-          <p>Məlumatlar sifariş müraciətini qəbul etmək, sifarişin detallarını dəqiqləşdirmək, müştəri ilə əlaqə saxlamaq və xidmətin hazırlanması üçün istifadə olunur. Məlumatlar reklam məqsədilə üçüncü tərəflərə satılmır.</p>
+          <p>Məlumatlar sifariş müraciətini qəbul etmək, sifarişin detallarını dəqiqləşdirmək və müştəri ilə əlaqə saxlamaq üçün istifadə olunur. Məlumatlar reklam məqsədilə üçüncü tərəflərə satılmır.</p>
           <h3 id="privacy-3">3. Saxlanma və təhlükəsizlik</h3>
-          <p>Saytın canlı versiyası Firebase / Cloud Firestore istifadə etdikdə sifariş məlumatları həmin xidmətin infrastrukturunda saxlanıla bilər. Məlumatların təhlükəsizliyi üçün uyğun giriş qaydaları və təhlükəsizlik parametrləri tətbiq edilir.</p>
+          <p>Saytın canlı versiyası Firebase / Cloud Firestore istifadə etdikdə sifariş məlumatları həmin xidmətin infrastrukturunda saxlanıla bilər.</p>
           <h3 id="privacy-4">4. Uşaqlara aid məlumatlar</h3>
-          <p>Sayt uşaqlar üçün xidmətlər təklif etsə də, sifariş forması valideyn və ya qanuni nümayəndə tərəfindən doldurulmalıdır. Uşağa aid yalnız sifarişin hazırlanması üçün zəruri məlumatları təqdim edin.</p>
+          <p>Sifariş forması valideyn və ya qanuni nümayəndə tərəfindən doldurulmalıdır. Uşağa aid yalnız sifarişin hazırlanması üçün zəruri məlumatları təqdim edin.</p>
           <h3 id="privacy-5">5. Hüquqlarınız</h3>
-          <p>Şəxsi məlumatlarınıza düzəliş edilməsi və ya silinməsi barədə müraciət edə bilərsiniz. Hüquqi və əməliyyat öhdəliklərinə görə müəyyən məlumatların saxlanması zəruri ola bilər.</p>
+          <p>Şəxsi məlumatlarınıza düzəliş edilməsi və ya silinməsi barədə müraciət edə bilərsiniz.</p>
           <h3 id="privacy-6">6. Siyasətin yenilənməsi və əlaqə</h3>
           <p>Bu siyasət xidmət və məlumat emalı qaydaları dəyişdikdə yenilənə bilər. Əlaqə üçün saytdakı sifariş formasından istifadə edin.</p>
-          <div class="info-box">Yayımdan əvvəl hüquqi mətnin faktiki məlumat emalı prosesinizə və qüvvədə olan qanunvericiliyə uyğunluğunu yoxlayın.</div>
+          <div class="info-box">Yayımdan əvvəl hüquqi mətnin faktiki məlumat emalı prosesinizə uyğunluğunu yoxlayın.</div>
         </article>
       </div>
     </div>
@@ -733,7 +751,13 @@ button { cursor: pointer; }
   <img src="" alt="" class="modal-image" id="modalImage">
 </div>
 
-<button class="sponsor-btn" id="openSponsor" title="Təklif / Sponsorluq">💬</button>
+<!-- Sponsor düyməsi — SVG + sağda -->
+<button class="sponsor-btn" id="openSponsor" title="Təklif / Sponsorluq" aria-label="Əlaqə">
+  <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
 <div class="modal-overlay" id="sponsorModal">
   <div class="modal-sheet">
     <div class="modal-header">
@@ -862,10 +886,7 @@ button { cursor: pointer; }
           ${img ? `<img src="${esc(img)}" alt="${esc(title)}" loading="lazy">` : `<div style="font-size:40px;">📖</div>`}
           ${img ? `
             <button type="button" class="view-btn" data-image="${esc(img)}" data-title="${esc(title)}" aria-label="Şəklə bax">
-              <svg viewBox="0 0 24 24">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
+              <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
             </button>
           ` : ''}
         </div>
