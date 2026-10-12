@@ -152,25 +152,26 @@ button { cursor: pointer; }
 .price-card li:before { content: '✓'; color: var(--green); font-weight: 800; }
 .price-card .btn { width: 100%; }
 
-/* Künc endirim badge (əyri) */
+/* Künc endirim badge — düzgün görünən */
 .discount-corner {
   position: absolute;
-  top: 18px;
-  right: -32px;
+  top: 14px;
+  right: -30px;
   background: linear-gradient(135deg, #ef4444, #dc2626);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
-  padding: 6px 36px;
+  padding: 5px 34px;
   transform: rotate(45deg);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+  box-shadow: 0 3px 10px rgba(220, 38, 38, 0.4);
   z-index: 2;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
   animation: pulseCorner 2s ease-in-out infinite;
 }
 @keyframes pulseCorner {
-  0%, 100% { box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4); }
-  50% { box-shadow: 0 6px 18px rgba(220, 38, 38, 0.55); }
+  0%, 100% { box-shadow: 0 3px 10px rgba(220, 38, 38, 0.4); }
+  50% { box-shadow: 0 5px 16px rgba(220, 38, 38, 0.55); }
 }
 
 .campaign-title {
@@ -275,8 +276,24 @@ button { cursor: pointer; }
 .order-copy h2 { font-size: clamp(32px,4vw,45px); margin: 17px 0; }
 .order-copy p { color: var(--muted); }
 .order-points { list-style: none; padding: 0; margin: 24px 0; }
-.order-points li { padding: 8px 0; color: #625c7c; font-size: 13px; }
-.order-points li:before { content: '✦'; color: var(--purple); margin-right: 10px; }
+.order-points li {
+  padding: 8px 0;
+  color: #625c7c;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.order-points li svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  stroke: var(--purple);
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .order-form { background: white; border: 1px solid #eee8fb; border-radius: 25px; padding: 28px; box-shadow: 0 20px 60px #3e2b780c; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .field { display: flex; flex-direction: column; gap: 7px; }
@@ -416,7 +433,7 @@ button { cursor: pointer; }
   .price.has-discount { font-size: 34px; }
   .price small { font-size: 12px; }
   .old-price { font-size: 15px; }
-  .discount-corner { font-size: 11px; padding: 5px 30px; top: 14px; right: -28px; }
+  .discount-corner { font-size: 10px; padding: 4px 28px; top: 12px; right: -26px; }
   .campaign-title { font-size: 10px; }
   .campaign-title svg { width: 12px; height: 12px; }
   .price-card ul { margin: 12px 0 16px; }
@@ -445,6 +462,7 @@ button { cursor: pointer; }
   .order-copy h2 { font-size: 26px; }
   .order-copy p { font-size: 13px; }
   .order-points li { font-size: 12px; }
+  .order-points li svg { width: 14px; height: 14px; }
 
   .about-art { min-height: 200px; border-radius: 20px; }
   .about-img { min-height: 200px; border-radius: 20px; }
@@ -651,9 +669,18 @@ button { cursor: pointer; }
         <h2>Hekayənizi birlikdə yaradaq.</h2>
         <p>Formanı doldurun, komandamız sifarişin detalları ilə bağlı sizinlə əlaqə saxlasın.</p>
         <ul class="order-points">
-          <li>İstədiyiniz paketi seçin</li>
-          <li>Əlaqə məlumatlarınızı qeyd edin</li>
-          <li>Əlavə arzularınızı bizə yazın</li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            İstədiyiniz paketi seçin
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            Əlaqə məlumatlarınızı qeyd edin
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            Əlavə arzularınızı bizə yazın
+          </li>
         </ul>
         <div class="notice">Məlumatlarınız yalnız müraciətinizi qəbul etmək və sifarişlə bağlı sizinlə əlaqə saxlamaq məqsədilə istifadə olunur.</div>
       </div>
