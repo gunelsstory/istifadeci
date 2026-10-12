@@ -64,17 +64,25 @@ button { cursor: pointer; }
 .hero-visual { min-height: 390px; position: relative; display: grid; place-items: center; }
 .hero-orbit { position: absolute; width: 340px; height: 340px; border: 1px solid #d9d0fb; border-radius: 50%; transform: rotate(-20deg); }
 .hero-orbit:after { content: ''; position: absolute; inset: 25px; border: 1px dashed #dfd8f6; border-radius: 50%; }
-.storybook { position: relative; width: 255px; height: 310px; transform: rotate(-5deg); filter: drop-shadow(0 22px 22px #4b3b8630); }
-.book-back { position: absolute; inset: 10px -13px -6px 15px; border-radius: 10px 20px 20px 10px; background: #c7baf6; transform: rotate(8deg); }
-.book-cover { position: absolute; inset: 0; border-radius: 9px 18px 18px 9px; border: 6px solid #fff; background: linear-gradient(155deg,#7667df,#9e8ef0 64%,#e9c1d4); color: #fff; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 25px; }
-.book-cover .moon { font-size: 66px; line-height: 1; margin-bottom: 20px; text-shadow: 0 8px 20px #3c2e7830; }
-.book-cover strong { font: 800 25px/1.12 Manrope; max-width: 180px; }
-.book-cover small { font-size: 10px; letter-spacing: 2px; margin-top: 16px; opacity: .8; }
-.floating { position: absolute; background: #fff; border: 1px solid #f0eaf9; box-shadow: var(--shadow); border-radius: 18px; padding: 12px 15px; font-size: 12px; font-weight: 800; }
+
+/* Hero şəkil */
+.storybook { position: relative; z-index: 2; }
+.hero-book-img {
+  width: 255px;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 12px;
+  transform: rotate(-5deg);
+  filter: drop-shadow(0 22px 22px #4b3b8630);
+  display: block;
+}
+
+.floating { position: absolute; background: #fff; border: 1px solid #f0eaf9; box-shadow: var(--shadow); border-radius: 18px; padding: 12px 15px; font-size: 12px; font-weight: 800; z-index: 3; }
 .floating.one { left: 0; top: 64px; transform: rotate(-5deg); }
 .floating.two { right: 0; bottom: 62px; transform: rotate(4deg); }
 .floating span { font-size: 20px; margin-right: 7px; vertical-align: middle; }
-.spark { position: absolute; color: #8b79e8; font-size: 27px; }
+.spark { position: absolute; color: #8b79e8; font-size: 27px; z-index: 3; }
 .spark.s1 { top: 35px; right: 70px; }
 .spark.s2 { bottom: 32px; left: 48px; font-size: 20px; }
 
@@ -175,9 +183,21 @@ button { cursor: pointer; }
 .order-form .btn { width: 100%; }
 
 .about-panel { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; align-items: center; }
-.about-art { min-height: 300px; border-radius: 28px; background: radial-gradient(circle at 50% 40%,#fff 0 12%,transparent 13%), linear-gradient(145deg,#eae4ff,#fff0f4); display: grid; place-items: center; position: relative; overflow: hidden; }
-.about-art .big-star { font-size: 110px; color: #8c7ce7; text-shadow: 0 15px 25px #8c7ce733; }
-.about-art .circle { position: absolute; border: 1px solid #b8aef1; border-radius: 50%; width: 260px; height: 260px; }
+.about-art {
+  min-height: 300px;
+  border-radius: 28px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(145deg,#eae4ff,#fff0f4);
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 28px;
+}
 .about-copy h2 { font-size: clamp(30px,4vw,42px); }
 .about-copy p { color: var(--muted); margin-bottom: 14px; }
 .notice { border-radius: 14px; padding: 13px 15px; background: #f5f2ff; color: #6657be; font-size: 12px; margin-top: 18px; }
@@ -231,7 +251,6 @@ button { cursor: pointer; }
 
 .empty-note { grid-column: 1/-1; text-align: center; color: var(--muted); padding: 30px; border: 1px dashed #ded7ef; border-radius: 16px; font-size: 14px; }
 
-/* ===== MOBİL — kiçik və səliqəli ===== */
 @media (max-width: 900px) {
   .navlinks { gap: 12px; }
   .navlinks a { font-size: 12px; }
@@ -266,6 +285,7 @@ button { cursor: pointer; }
   .hero-actions { gap: 8px; }
   .btn { min-height: 40px; padding: 0 16px; font-size: 12px; border-radius: 12px; }
   .hero-visual { min-height: 260px; transform: scale(.78); margin: -8px 0; }
+  .hero-book-img { width: 200px; max-height: 260px; }
   .eyebrow { font-size: 10px; padding: 6px 10px; }
 
   .section { padding: 48px 0; }
@@ -279,7 +299,6 @@ button { cursor: pointer; }
   .feature h3 { font-size: 16px; }
   .feature p { font-size: 12px; }
 
-  /* Qiymət slider */
   .price-grid {
     display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; gap: 12px; padding: 0 2px 12px;
@@ -299,7 +318,6 @@ button { cursor: pointer; }
   .price-card li { font-size: 12px; padding: 6px 0; }
   .price-card .btn { min-height: 38px; font-size: 12px; }
 
-  /* Portfolio */
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
   .work-card { border-radius: 14px; }
   .work-art { height: auto; aspect-ratio: 1 / 1; }
@@ -312,7 +330,6 @@ button { cursor: pointer; }
   .portfolio-toggle-btn { padding: 9px 16px; font-size: 12px; gap: 6px; }
   .portfolio-toggle-btn svg { width: 14px; height: 14px; }
 
-  /* Order form */
   .order-form { padding: 18px; border-radius: 18px; }
   .form-grid { grid-template-columns: 1fr; gap: 12px; }
   .field label { font-size: 11px; }
@@ -323,28 +340,23 @@ button { cursor: pointer; }
   .order-copy p { font-size: 13px; }
   .order-points li { font-size: 12px; }
 
-  /* About */
   .about-art { min-height: 200px; border-radius: 20px; }
-  .about-art .big-star { font-size: 80px; }
+  .about-img { min-height: 200px; border-radius: 20px; }
   .about-copy h2 { font-size: 24px; }
   .about-copy p { font-size: 13px; }
   .notice { font-size: 11px; padding: 11px 13px; }
 
-  /* Legal */
   .legal-content h3 { font-size: 16px; margin: 20px 0 8px; }
   .legal-content p, .legal-content li { font-size: 13px; }
   .info-box { font-size: 12px; padding: 12px 14px; }
 
-  /* Footer */
   .footer { padding: 36px 0 16px; }
   .footer-grid { grid-template-columns: 1fr; gap: 20px; padding-bottom: 24px; }
   .footer-grid > div:last-child { grid-column: auto; }
   .copyright { flex-direction: column; font-size: 10px; gap: 8px; }
 
-  /* Sponsor düyməsi */
   .sponsor-btn { bottom: 14px; left: 14px; width: 44px; height: 44px; font-size: 18px; }
 
-  /* Bildiriş modal */
   .notif-card { padding: 22px 18px; border-radius: 18px; max-width: 340px; }
   .notif-close { width: 28px; height: 28px; font-size: 16px; top: 10px; right: 10px; }
   .notif-title { font-size: 1.05rem; }
@@ -352,7 +364,6 @@ button { cursor: pointer; }
   .notif-msg { font-size: 13px; max-height: 180px; }
   .notif-btn { min-height: 40px; margin-top: 14px; font-size: 12px; }
 
-  /* Sponsor modal */
   .modal-sheet { padding: 18px 16px 24px; border-radius: 20px 20px 0 0; }
   .modal-header h3 { font-size: 1rem; }
   .close-x { width: 28px; height: 28px; font-size: 16px; }
@@ -362,11 +373,9 @@ button { cursor: pointer; }
   .modal-sheet .field textarea { padding: 10px 11px; font-size: 13px; border-radius: 10px; }
   .modal-sheet .btn { min-height: 40px; font-size: 12px; }
 
-  /* Fullscreen modal */
   .modal-close-btn { width: 36px; height: 36px; font-size: 22px; top: 12px; right: 12px; }
   .image-modal { padding: 12px; }
 
-  /* Status toast */
   .status { right: 12px; bottom: 70px; font-size: 12px; padding: 11px 14px; border-radius: 12px; }
 }
 </style>
@@ -396,6 +405,7 @@ button { cursor: pointer; }
 </header>
 
 <main>
+  <!-- HERO -->
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div>
@@ -414,12 +424,7 @@ button { cursor: pointer; }
       <div class="hero-visual">
         <div class="hero-orbit"></div>
         <div class="storybook">
-          <div class="book-back"></div>
-          <div class="book-cover">
-            <div class="moon">☾</div>
-            <strong>Mənim sehrli hekayəm</strong>
-            <small>YALNIZ SƏNƏ ÖZƏL</small>
-          </div>
+          <img src="image/hero-book.png" alt="Mənim sehrli hekayəm" class="hero-book-img">
         </div>
         <div class="floating one"><span>✨</span> Fərdi hazırlanır</div>
         <div class="floating two"><span>💜</span> Sevgi ilə yaradılır</div>
@@ -429,11 +434,11 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section class="section" id="about">
     <div class="container about-panel">
       <div class="about-art">
-        <div class="circle"></div>
-        <div class="big-star">✧</div>
+        <img src="image/about.jpg" alt="Haqqımızda" class="about-img">
       </div>
       <div class="about-copy">
         <span class="eyebrow"><i></i> HAQQIMIZDA</span>
@@ -445,6 +450,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- FEATURES -->
   <section class="section soft">
     <div class="container">
       <div class="section-head">
@@ -472,6 +478,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- PRICING -->
   <section class="section" id="pricing">
     <div class="container">
       <div class="section-head">
@@ -485,6 +492,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- PORTFOLIO -->
   <section class="section soft" id="portfolio">
     <div class="container">
       <div class="section-head">
@@ -506,6 +514,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- ORDER -->
   <section class="section order-section" id="order">
     <div class="container order-grid">
       <div class="order-copy">
@@ -559,6 +568,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- TERMS -->
   <section class="section" id="terms">
     <div class="container">
       <div class="section-head">
@@ -630,6 +640,7 @@ button { cursor: pointer; }
     </div>
   </section>
 
+  <!-- PRIVACY -->
   <section class="section soft" id="privacy">
     <div class="container">
       <div class="section-head">
