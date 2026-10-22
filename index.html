@@ -56,7 +56,7 @@
 
 }
 
-*{ box-sizing: border-box; margin: 0; padding: 0; }
+{ box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body { color: var(--ink); background: #fff; font: 15px/1.65 'DM Sans', sans-serif; }
@@ -591,18 +591,15 @@ button { cursor: pointer; }
 
 .order-form { background: white; border: 1px solid #eee8fb; border-radius: 25px; padding: 28px; box-shadow: 0 20px 60px #3e2b780c; }
 
-.form-grid {
-    display: grid;  grid-template-columns: repeat(2, minmax(0, 1fr));  gap: 16px;}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-.field {  display: flex;  flex-direction: column;  gap: 7px;  min-width: 0;}
+.field { display: flex; flex-direction: column; gap: 7px; }
 
 .field.full { grid-column: 1/-1; }
 
 .field label { font-size: 12px; font-weight: 800; color: #5e5875; }
 
-.field input,
-.field select,
-.field textarea { width: 100%;  max-width: 100%; box-sizing: border-box;}
+.field input, .field select, .field textarea { width: 100%; border: 1px solid #e9e4f2; border-radius: 12px; padding: 12px 13px; outline: none; background: #fff; color: var(--ink); font-size: 13px; }
 
 .field input:focus, .field select:focus, .field textarea:focus { border-color: #a69aef; box-shadow: 0 0 0 3px #eeeaff; }
 
@@ -912,7 +909,7 @@ button { cursor: pointer; }
 
   .order-form { padding: 18px; border-radius: 18px; }
 
-  .form-grid {grid-template-columns: 1fr; gap: 12px; }
+  .form-grid { grid-template-columns: 1fr; gap: 12px; }
 
   .field label { font-size: 11px; }
 
